@@ -1,0 +1,161 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(23, 23, 23);
+}
+
+main {
+    min-height: calc(100vh - 70px);
+  }
+  
+  footer {
+    height: 50px;
+  }
+
+
+h1{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+a{
+    text-decoration: none !important;
+}
+
+a:hover{
+    text-decoration: underline !important;
+}
+
+.offcanvas{
+    left: 0;
+}
+
+.descr{
+    max-height: 100px !important;
+    overflow: hidden;
+}
+
+.bi-list{
+    cursor: pointer !important;
+}
+
+/* .offcanvas-start{
+    width: 200px;
+} */
+
+.purple{
+    color: #460b55 !important;
+}
+
+.pink{
+    color:rgb(237, 146, 245) !important;
+}
+
+.bg-purple{
+    background-color: #460b55 !important;
+}
+
+/* a:active {
+    color: rgb(23, 23, 23) !important;
+    font-weight: bold;
+    font-size: 20px;
+} */
+
+.nav-link:hover{
+    /* background-color: #fff; */
+    color: rgb(237, 146, 245) !important;
+}
+
+.btn:hover{
+    background-color: rgb(0, 0, 0) !important;
+}
+
+/* .mt7{
+    margin-top: 7%;
+} */
+
+.logo{
+    max-width: 180px;
+    height:  70px;
+    display: none;
+}
+
+.btn-close{
+    width: 30px;
+    height: 30px;
+}
+
+.form-check-input:checked{
+    border-color: #fff;
+}
+
+input[type="checkbox"]:focus{
+    box-shadow: none;
+    border-color: #fff;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border-color: rgb(23, 23, 23);
+  border-width: 3px;
+  box-shadow: none;
+  outline: 0 none;
+}
+
+
+.fs-small{
+    font-size: 12px
+}
+
+button[name="record"]{
+    display: none;
+}
+
+.wrapper{
+    width: fit-content !important;
+}
+
+
+/* button[name="delete_product_img"]{
+    right:2% !important;
+    cursor: pointer !important;
+} */
+
+
+/* .catalog .col:first-child{
+    width: 20%;
+} */
+
+/* .categories-list{
+    max-width: 50% !important;
+} */
+
+@media (max-width: 991px) {
+    .col-2{
+        width: 100% !important;
+    }
+
+    .categories-list{
+        width: 100% !important;
+    }
+}
+
+
+@media (max-width: 329px) {
+    .my-mb{
+        margin-bottom: 20px;
+    };
+    
+}
