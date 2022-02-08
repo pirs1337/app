@@ -24,14 +24,6 @@ class Redirect{
         exit;
     }
 
-    // public function redirectByIf($value, $url = ''){
-    //     if($value){
-    //         $this->edirectTo($url);
-    //     }else{
-    //         $this->edirectBack();
-    //     }
-    // }
-
     public function redirectToHome($id = null){
         session_start();
         if(!$id){

@@ -191,8 +191,8 @@ class User extends Base{
     public function logout($logout = null){
         if(isset($_GET['logout']) || $logout){
             Cookie::deleteCookie('remember_token');
-            session_destroy();
-            self::redirectBack();
+            unset($_SESSION['user']);
+            $this->redirectNotAuth();
         } 
     }
 
