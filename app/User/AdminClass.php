@@ -249,24 +249,6 @@ class Admin extends User{
             $this->redirectTo('/assets/views/auth/admin/product/edit.php/?product='.$this->form_data['slug'].'');
         }
 
-        // if(isset($_POST['delete_product_img'])){
-        //     var_dump($_POST);
-        //     die;
-        //     $product = new Product;
-        //     $img_id = trim($_POST['img']);
-        //     if(!$product->getProductImg($img_id)){
-        //         $_SESSION['error'] = self::ERROR_MSG['img'];
-        //         self::redirectBack();
-        //     }
-        
-        //     $query = "DELETE FROM `products_imgs` WHERE `id` = ?";
-        //     $params = [$img_id];
-        //     $stmt = $this->db->prepare($query);
-        //     $result =  $stmt->execute($params);
-
-        //     self::result($result, 'img'); 
-        // }
-
         if($_POST['img_id']){
 
             $img_id = trim($_POST['img_id']);

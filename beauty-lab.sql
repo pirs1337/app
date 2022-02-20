@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Янв 30 2022 г., 17:39
+-- Время создания: Фев 20 2022 г., 10:16
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -109,13 +109,6 @@ CREATE TABLE `records` (
   `time` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Дамп данных таблицы `records`
---
-
-INSERT INTO `records` (`id`, `date`, `time`) VALUES
-(36, '01.05.2022', '04:24');
-
 -- --------------------------------------------------------
 
 --
@@ -126,7 +119,6 @@ CREATE TABLE `users` (
   `id` int(11) UNSIGNED NOT NULL,
   `username` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `tel` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `admin` tinyint(1) DEFAULT 0,
   `remember_token` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -135,9 +127,8 @@ CREATE TABLE `users` (
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `tel`, `email`, `admin`, `remember_token`) VALUES
-(10, 'roman228', '+7(951) 410-53-18', NULL, 1, 'b7ed59bc9af34812e1173c57e0ccda64bbdff6760cb98bbc55fbd8100add97f711b6969474bf0f06615b7b8568aa92d3f3d4a2542517bf479ede90e80e9eb9f22fcc259d00bbc47761892cccc02efad937aae5ad42f7570b47eb22331118506828d4af765d17f6b5956015dc01b04fed3cc24fae4a1cc331b785bc09616817'),
-(11, 'users', '+7(455) 467-67-67', NULL, 0, NULL);
+INSERT INTO `users` (`id`, `username`, `tel`, `admin`, `remember_token`) VALUES
+(12, 'admin', '+7(999) 999-99-99', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -150,13 +141,6 @@ CREATE TABLE `users_records` (
   `user_id` int(11) UNSIGNED NOT NULL,
   `record_id` int(11) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Дамп данных таблицы `users_records`
---
-
-INSERT INTO `users_records` (`id`, `user_id`, `record_id`) VALUES
-(29, 10, 36);
 
 --
 -- Индексы сохранённых таблиц
@@ -197,8 +181,7 @@ ALTER TABLE `records`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `tel_or_email` (`tel`),
-  ADD UNIQUE KEY `email` (`email`);
+  ADD UNIQUE KEY `tel_or_email` (`tel`);
 
 --
 -- Индексы таблицы `users_records`
@@ -240,7 +223,7 @@ ALTER TABLE `records`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT для таблицы `users_records`

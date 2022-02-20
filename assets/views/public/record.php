@@ -13,7 +13,8 @@
         <? 
             if(!$_SESSION['user']){
                 echo '<a href="../unauth/auth/login.php" class="btn bg-purple text-white fs-4">Войдите в аккаунт чтобы записаться</a>';
-                die();
+                echo '</main>';
+                require_once '../layouts/footer.php';
             }
 
             Base::showSuccessMsg();
@@ -55,6 +56,6 @@
             ?>
         </form>
     </main>
-    <? require_once '../layouts/footer.php'; ?>
+    <? require_once '../layouts/footer.php' ?>
 </body>
 </html>
